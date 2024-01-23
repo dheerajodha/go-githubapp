@@ -52,7 +52,6 @@ func main() {
 
 	prCommentHandler := &PRCommentHandler{
 		ClientCreator: cc,
-		preamble:      config.AppConfig.PullRequestPreamble,
 	}
 
 	webhookHandler := githubapp.NewDefaultEventDispatcher(config.Github, prCommentHandler)
